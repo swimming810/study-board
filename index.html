@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>课间 · 学习任务看板</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+<header><div><span class="eyebrow">STUDY BOARD / 课程项目</span><h1>把计划，变成进度。</h1><p>记录学习任务，让每一次完成都看得见。</p></div><div id="today"></div></header>
+<section class="stats" aria-label="任务统计"><article><span>全部任务</span><strong id="total">0</strong></article><article><span>已完成</span><strong id="done">0</strong></article><article><span>完成率</span><strong id="rate">0%</strong></article></section>
+<section class="panel"><h2>添加一个小目标</h2><form id="task-form"><label class="title-label">任务名称<input id="title" required maxlength="100" placeholder="例如：完成数据挖掘实验报告"></label><label>截止日期<input id="due" type="date" required></label><label>优先级<select id="priority"><option value="medium">普通</option><option value="high">重要</option><option value="low">稍后</option></select></label><button type="submit">＋ 添加任务</button></form><p id="message" role="status"></p></section>
+<section class="panel"><div class="list-header"><h2>我的任务</h2><input id="search" type="search" aria-label="搜索任务" placeholder="搜索任务…"></div><nav aria-label="筛选任务"><button class="filter active" data-filter="all" aria-pressed="true">全部</button><button class="filter" data-filter="pending" aria-pressed="false">待完成</button><button class="filter" data-filter="completed" aria-pressed="false">已完成</button></nav><ul id="tasks"></ul><div id="empty">暂时没有任务，给今天添加一个小目标吧。</div></section>
+<footer>课间 Study Board · 数据仅保存在当前浏览器 · 使用 AI 辅助开发</footer>
+</main><script src="app.js"></script>
+</body></html>
